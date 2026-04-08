@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Selectors Demo</title>
+
+    <style>
+        /* ----------------------------- */
+        /* i) Simple Selectors */
+
+        /* Element Selector */
+        p {
+            color: blue;
+        }
+
+        /* ID Selector */
+        #main {
+            background-color: lightgray;
+        }
+
+        /* Class Selector */
+        .highlight {
+            color: red;
+        }
+
+        /* Group Selector */
+        h1, h2 {
+            text-align: center;
+        }
+
+        /* Universal Selector */
+        * {
+            font-family: Arial;
+        }
+
+        /* ----------------------------- */
+        /* ii) Combinator Selectors */
+
+        /* Descendant Selector */
+        div p {
+            color: green;
+        }
+
+        /* Child Selector */
+        div > h3 {
+            color: orange;
+        }
+
+        /* Adjacent Sibling Selector */
+        h1 + p {
+            background-color: yellow;
+        }
+
+        /* General Sibling Selector */
+        h2 ~ p {
+            border: 1px solid black;
+        }
+
+        /* ----------------------------- */
+        /* iii) Pseudo-class Selectors */
+
+        a:hover {
+            color: purple;
+        }
+
+        li:first-child {
+            color: brown;
+        }
+
+        /* ----------------------------- */
+        /* iv) Pseudo-element Selectors */
+
+        p::first-letter {
+            font-size: 24px;
+            color: darkblue;
+        }
+
+        p::after {
+            content: " ✔";
+        }
+
+        /* ----------------------------- */
+        /* v) Attribute Selector */
+
+        input[type="text"] {
+            border: 2px solid red;
+        }
+    </style>
+
+</head>
+<body id="main">
+
+    <h1>CSS Selectors Example</h1>
+    <h2>Group Selector Example</h2>
+
+    <p>This is a paragraph.</p>
+
+    <p class="highlight">This uses class selector.</p>
+
+    <div>
+        <h3>Child Selector Example</h3>
+        <p>Descendant selector example inside div.</p>
+    </div>
+
+    <h1>Heading</h1>
+    <p>Adjacent sibling selector example.</p>
+
+    <h2>Another Heading</h2>
+    <p>General sibling example 1</p>
+    <p>General sibling example 2</p>
+
+    <h3>Pseudo-class Example</h3>
+    <a href="#">Hover over me</a>
+
+    <ul>
+        <li>First item</li>
+        <li>Second item</li>
+    </ul>
+
+    <h3>Attribute Selector</h3>
+    <input type="text" placeholder="Text field">
+    <input type="password" placeholder="Password field">
+
+</body>
+</html>
