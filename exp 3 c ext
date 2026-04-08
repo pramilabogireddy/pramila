@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Types Example</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        /* Selector: p */
+        p {
+            color: red;             /* Property: color, Value: red */
+            font-size: 18px;        /* Property: font-size, Value: 18px */
+        }
+
+        /* Selector: .int */
+        .int {
+            background-color: yellow; /* Property: background-color, Value: yellow */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>External CSS Applied</h1>
+
+    <!-- Inline CSS -->
+    <h2 style="color: purple; font-size: 24px;">
+        Inline CSS Example
+        <!-- Property: color → Value: purple -->
+        <!-- Property: font-size → Value: 24px -->
+    </h2>
+
+    <!-- Internal CSS -->
+    <p class="int">
+        This paragraph uses Internal CSS.
+    </p>
+
+    <!-- External CSS -->
+    <div class="ext">
+        This div uses External CSS.
+    </div>
+
+</body>
+</html>
