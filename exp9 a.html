@@ -1,0 +1,58 @@
+function getNumber() {
+return parseInt(document.getElementById("num").value);
+}
+function factorial() {
+var n = getNumber();
+var fact = 1;
+for (var i = 1; i <= n; i++) {
+fact *= i;
+}
+document.getElementById("result").innerHTML =
+"Factorial of " + n + " is: " + fact;
+}
+function fibonacci() {
+var n = getNumber();
+var a = 0, b = 1, c;
+var output = "Fibonacci Series: ";
+for (var i = 1; i <= n; i++) {
+output += a + " ";
+c = a + b;
+a = b;
+b = c;
+}
+
+document.getElementById("result").innerHTML = output;
+}
+function primeNumbers() {
+var n = getNumber();
+var output = "Prime Numbers up to " + n + ": ";
+for (var i = 2; i <= n; i++) {
+var isPrime = true;
+for (var j = 2; j <= Math.sqrt(i); j++) {
+if (i % j === 0) {
+isPrime = false;
+break;
+}
+}
+if (isPrime) {
+output += i + " ";
+}
+}
+document.getElementById("result").innerHTML = output;
+}
+function palindrome() {
+var n = getNumber();
+var temp = n, rev = 0, digit;
+while (temp > 0) {
+digit = temp % 10;
+rev = rev * 10 + digit;
+temp = Math.floor(temp / 10);
+}
+if (rev === n) {
+document.getElementById("result").innerHTML =
+n + " is a Palindrome Number";
+} else {
+document.getElementById("result").innerHTML =
+n + " is NOT a Palindrome Number";
+}
+}
