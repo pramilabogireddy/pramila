@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Looping Data in JavaScript</title>
+<script>
+function loopDemo() {
+var student = {
+name: "Ravi",
+roll: 101,
+
+course: "B.Tech",
+marks: 85
+};
+var subjects = ["Maths", "Physics", "Chemistry"];
+var output = "";
+// for-in loop (object)
+output += "<b>Using for-in loop (Object Data):</b><br>";
+for (var key in student) {
+output += key + " : " + student[key] + "<br>";
+}
+output += "<br>";
+// forEach loop (array)
+output += "<b>Using forEach loop (Array Data):</b><br>";
+subjects.forEach(function (value, index) {
+output += index + " : " + value + "<br>";
+});
+output += "<br>";
+// for-of loop (array)
+output += "<b>Using for-of loop (Array Data):</b><br>";
+for (var subject of subjects) {
+output += subject + "<br>";
+}
+document.getElementById("result").innerHTML = output;
+}
+</script>
+</head>
+<body onload="loopDemo()">
+<h2>Printing Data Using Different Loops</h2>
+<p id="result"></p>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Armstrong Number</title>
+<script>
+function checkArmstrong() {
+var num = parseInt(prompt("Enter a number:"));
+var temp = num;
+var sum = 0;
+var digit;
+while (temp > 0) {
+digit = temp % 10;
+sum = sum + (digit * digit * digit);
+temp = Math.floor(temp / 10);
+}
+if (sum === num) {
+alert(num + " is an ARMSTRONG NUMBER");
+} else {
+alert(num + " is NOT an ARMSTRONG NUMBER");
+}
+}
+</script>
+</head>
+<body onload="checkArmstrong()">
+<h2>Armstrong Number Program</h2>
+</body>
+</html>
