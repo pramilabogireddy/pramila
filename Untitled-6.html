@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RegExp Object Demo</title>
+<script>
+function regexDemo() {
+// Create RegExp object
+var pattern = /JavaScript/gi;
+var text = "JavaScript is a popular JavaScript language";
+var output = "";
+// RegExp properties
+output += "Pattern Source: " + pattern.source + "<br>";
+output += "Global Flag: " + pattern.global + "<br>";
+output += "Ignore Case Flag: " + pattern.ignoreCase + "<br><br>";
+// RegExp methods
+output += "Test Result: " + pattern.test(text) + "<br>";
+var result = pattern.exec(text);
+if (result != null) {
+output += "Matched Text: " + result[0] + "<br>";
+output += "Match Position: " + result.index + "<br>";
+}
+
+document.getElementById("result").innerHTML = output;
+}
+</script>
+</head>
+<body onload="regexDemo()">
+<h2>RegExp Object Properties and Methods</h2>
+<p id="result"></p>
+</body>
+</html>
